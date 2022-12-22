@@ -15,7 +15,7 @@ def task_3_3():
     elif wall_is_on_the_left() == False:
         move_left()
 
-    elif wall_is_on_the_right() == False:
+    else:
         move_right()                    
 
 if __name__ == '__main__':
