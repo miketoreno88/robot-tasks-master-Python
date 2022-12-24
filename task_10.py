@@ -6,7 +6,7 @@ from pyrob.api import *
 @task
 def task_8_3():
     while  wall_is_on_the_right() == False:
-        if wall_is_above() == True or wall_is_beneath() == True:
+        if wall_is_above() or wall_is_beneath() is True:
             fill_cell()
             move_right()
         else:
