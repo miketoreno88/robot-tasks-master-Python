@@ -8,7 +8,6 @@ def task_8_28():
     direction = -1
     while wall_is_above() == True:
         if wall_is_on_the_left() == True: 
-            print('ky')
             direction = 1
         if direction == -1:
             move_left()
