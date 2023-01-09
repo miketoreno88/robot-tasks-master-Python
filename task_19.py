@@ -5,26 +5,19 @@ from pyrob.api import *
 
 @task
 def task_8_29():
-
-
-
-    direction = -1
-    if direction == -1:
         while wall_is_on_the_left() == False:
             move_left()
             if wall_is_on_the_left() == True and wall_is_above() == False:
                 go_home()
             elif wall_is_on_the_left() == True and wall_is_above() == True:
-                direction = 1    
-
-
-    if direction == 1:
-        while wall_is_on_the_right() == False:        
-            move_right()
-            if wall_is_on_the_right() == True and wall_is_above() == False:
-                direction = 0
-                go_home()
-            
+                while wall_is_on_the_right() == False:        
+                    move_right()
+                    if wall_is_on_the_right() == True and wall_is_above() == False:
+                        direction = 0
+                        go_home()
+                        break
+            if wall_is_on_the_right() == True and wall_is_above() == True:
+                break
 def go_home():
     while wall_is_above() == False:
         move_up()
