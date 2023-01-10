@@ -6,8 +6,8 @@ from pyrob.api import *
 @task(delay=0.05)
 def task_4_3():
     move_right()
-    for i in range (6):
-        #move_down()
+    for i in range(6):
+        # move_down()
         for i in range(27):
             fill_cell()
             move_right()
@@ -18,8 +18,6 @@ def task_4_3():
             move_left()
         move_down()
         move_right()
-        
-
 
 
 if __name__ == '__main__':
