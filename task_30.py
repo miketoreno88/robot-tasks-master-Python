@@ -10,8 +10,11 @@ def task_9_3():
     while not wall_is_beneath():
         i += 1
         move_down()
-    turnover(i)
-    turnover(i-2)
+    j = math.floor(i/2)
+    print(j)
+    for k in range(j):
+        turnover(i)
+        turnover(i-2)
     while not wall_is_on_the_left() and  not wall_is_beneath():
         move_left()
         move_down()
